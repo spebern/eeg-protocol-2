@@ -28,7 +28,7 @@ if ON_WINDOWS:
     import winsound
 
 
-def get_SCREEN_WIDTH_and_height():
+def get_screen_width_and_height():
     monitor_info = screeninfo.get_monitors()[0]
     if not monitor_info:
         sys.exit("couldn't find monitor")
@@ -38,7 +38,7 @@ def get_SCREEN_WIDTH_and_height():
     return SCREEN_WIDTH, SCREEN_HEIGHT
 
 
-SCREEN_WIDTH, SCREEN_HEIGHT = get_SCREEN_WIDTH_and_height()
+SCREEN_WIDTH, SCREEN_HEIGHT = get_screen_width_and_height()
 
 CENTER_X = SCREEN_WIDTH // 2
 CENTER_Y = SCREEN_HEIGHT // 2

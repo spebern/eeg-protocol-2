@@ -49,15 +49,15 @@ GREEN  = (  0, 255, 0)
 RED    = (255, 0  , 0)
 
 pygame.init()
-# screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), pygame.FULLSCREEN)
-SCREEN = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+SCREEN = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), pygame.FULLSCREEN)
+# SCREEN = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 SCREEN.fill(BLACK)
 
 CLOCK = pygame.time.Clock()
 
 
 class Circle():
-    def __init__(self, x, y, radius=100, color=YELLOW):
+    def __init__(self, x, y, radius=50, color=YELLOW):
         self.x      = x
         self.y      = y
         self.color  = color
@@ -78,7 +78,7 @@ class Circle():
 
 
 class Cursor():
-    def __init__(self, color=GREEN, radius=50):
+    def __init__(self, color=GREEN, radius=25):
         self.initial_color = color
         self.radius        = radius
         self.x             = 0
@@ -148,7 +148,7 @@ class Cursor():
             self.y = self.target_y
 
 
-def spawn_circles(radius=800):
+def spawn_circles(radius=400):
     return [
         # top
         Circle(CENTER_X - radius, CENTER_Y - radius),

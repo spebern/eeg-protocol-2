@@ -186,7 +186,7 @@ green_arrow = GreenArrow()
 
 
 def render():
-    dt = CLOCK.tick() / 1000.0
+    dt = CLOCK.tick(60.0) / 1000.0
     SCREEN.fill(BLACK)
 
     for game_object in game_objects:
